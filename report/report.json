@@ -1,0 +1,384 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "Login",
+    "line": 1,
+    "id": "login",
+    "tags": [],
+    "uri": "features/login.feature",
+    "elements": [
+      {
+        "id": "login;e-shop-application---create-new-account",
+        "keyword": "Scenario",
+        "line": 10,
+        "name": "E-Shop Application - Create New Account",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "runner/hooks.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 497000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User launched eshop login page",
+            "match": {
+              "location": "features/support/steps.js:11"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 71000000,
+              "error_message": "page.goto: net::ERR_NAME_NOT_RESOLVED at http://awswrkshpalb-1570520390.us-west-2.elb.amazonaws.com:3000/cts-shop/login\n=========================== logs ===========================\nnavigating to \"http://awswrkshpalb-1570520390.us-west-2.elb.amazonaws.com:3000/cts-shop/login\", waiting until \"load\"\n============================================================\n    at LoginPage.navigate (/Users/kai/Development/chatGPT/Playwright-Cucumber/page_object/login.page.js:6:20)\n    at World.<anonymous> (/Users/kai/Development/chatGPT/Playwright-Cucumber/features/support/steps.js:12:21)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User create account with \"Ashish\", \"Ghosh\", \"Ashish@shop.com\" and \"Password$1\"",
+            "match": {
+              "location": "features/support/steps.js:23"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "User account should get created",
+            "match": {
+              "location": "features/support/steps.js:29"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "runner/hooks.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "login;login-to-the-e-shop-application-with-wrong-password",
+        "keyword": "Scenario",
+        "line": 28,
+        "name": "Login to the E-Shop Application with Wrong Password",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "runner/hooks.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 150000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 22,
+            "name": "User launched eshop login page",
+            "match": {
+              "location": "features/support/steps.js:11"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 20000000,
+              "error_message": "page.goto: net::ERR_NAME_NOT_RESOLVED at http://awswrkshpalb-1570520390.us-west-2.elb.amazonaws.com:3000/cts-shop/login\n=========================== logs ===========================\nnavigating to \"http://awswrkshpalb-1570520390.us-west-2.elb.amazonaws.com:3000/cts-shop/login\", waiting until \"load\"\n============================================================\n    at LoginPage.navigate (/Users/kai/Development/chatGPT/Playwright-Cucumber/page_object/login.page.js:6:20)\n    at World.<anonymous> (/Users/kai/Development/chatGPT/Playwright-Cucumber/features/support/steps.js:12:21)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 23,
+            "name": "User logged in eshop using the invalid emailid \"testuser_negative@shop.com\" and the invalid password \"Testing$1\"",
+            "match": {
+              "location": "features/support/steps.js:15"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 24,
+            "name": "User should not get logged in",
+            "match": {
+              "location": "features/support/steps.js:19"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "runner/hooks.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Payment",
+    "line": 1,
+    "id": "payment",
+    "tags": [],
+    "uri": "features/payment.feature",
+    "elements": [
+      {
+        "id": "payment;order-a-product",
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Order a product",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "runner/hooks.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "User launched eshop login page",
+            "match": {
+              "location": "features/support/steps.js:11"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 12000000,
+              "error_message": "page.goto: net::ERR_NAME_NOT_RESOLVED at http://awswrkshpalb-1570520390.us-west-2.elb.amazonaws.com:3000/cts-shop/login\n=========================== logs ===========================\nnavigating to \"http://awswrkshpalb-1570520390.us-west-2.elb.amazonaws.com:3000/cts-shop/login\", waiting until \"load\"\n============================================================\n    at LoginPage.navigate (/Users/kai/Development/chatGPT/Playwright-Cucumber/page_object/login.page.js:6:20)\n    at World.<anonymous> (/Users/kai/Development/chatGPT/Playwright-Cucumber/features/support/steps.js:12:21)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 5,
+            "name": "User logged in eshop using the valid emailid \"Ashish@shop.com\" and the valid password \"Ashishpwd$1\"",
+            "match": {
+              "location": "features/support/steps.js:33"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 6,
+            "name": "User searches for the \"Apple iPhone 6s Plus\"",
+            "match": {
+              "location": "features/support/steps.js:37"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "User adds \"Apple iPhone 6s Plus\" product to the cart",
+            "match": {
+              "location": "features/support/steps.js:42"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User enters Address details with \"Mr\",\"Ashish\", \"Ghosh\", \"Amstelveen\",\"Uilenstede\",\"Amsterdam\",\"Amsterdam\", \"1181\"",
+            "match": {
+              "location": "features/support/steps.js:50"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "User enters Payment details with \"1234567890\", \"Ashish\", \"2031\",\"11\",\"151\"",
+            "match": {
+              "location": "features/support/steps.js:54"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "User should get the Confirmation of Order",
+            "match": {
+              "location": "features/support/steps.js:58"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "runner/hooks.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Search-Add",
+    "line": 1,
+    "id": "search-add",
+    "tags": [],
+    "uri": "features/search.feature",
+    "elements": [
+      {
+        "id": "search-add;search-product",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Search Product",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "runner/hooks.js:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "User launched eshop login page",
+            "match": {
+              "location": "features/support/steps.js:11"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 11000000,
+              "error_message": "page.goto: net::ERR_NAME_NOT_RESOLVED at http://awswrkshpalb-1570520390.us-west-2.elb.amazonaws.com:3000/cts-shop/login\n=========================== logs ===========================\nnavigating to \"http://awswrkshpalb-1570520390.us-west-2.elb.amazonaws.com:3000/cts-shop/login\", waiting until \"load\"\n============================================================\n    at LoginPage.navigate (/Users/kai/Development/chatGPT/Playwright-Cucumber/page_object/login.page.js:6:20)\n    at World.<anonymous> (/Users/kai/Development/chatGPT/Playwright-Cucumber/features/support/steps.js:12:21)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "User logged in eshop using the valid emailid \"Ashish@shop.com\" and the valid password \"Password$1\"",
+            "match": {
+              "location": "features/support/steps.js:33"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "User searches for the \"Apple iPhone 6s Plus\"",
+            "match": {
+              "location": "features/support/steps.js:37"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 8,
+            "name": "User adds \"Apple iPhone 6s Plus\" product to the cart",
+            "match": {
+              "location": "features/support/steps.js:42"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "User should be able to view and add the listed product \"Apple iPhone 6s Plus\"",
+            "match": {
+              "location": "features/support/steps.js:46"
+            },
+            "result": {
+              "status": "skipped"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "runner/hooks.js:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

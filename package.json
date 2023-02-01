@@ -1,0 +1,1 @@
+{"scripts":{"test":"cucumber-js --parallel 1 -f json:report/report.json && node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml"},"dependencies":{"chai":"^4.3.7"},"devDependencies":{"cucumber":"^6.0.7","cucumberjs-junitxml":"^1.0.0","playwright":"^1.30.0"}}
