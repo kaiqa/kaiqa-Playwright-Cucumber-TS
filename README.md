@@ -1,7 +1,5 @@
-
-![Playwright Test Execution](https://github.com/ghoshasish99/Playwright-Cucumber/workflows/Playwright%20Test%20Execution/badge.svg)
-    
-# Playwright (execution on Moon) with CucumberJS
+ 
+# Playwright with CucumberJS
     
 Playwright end-to-end test automation with CucumberJS
     
