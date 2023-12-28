@@ -1,26 +1,28 @@
- 
 # Playwright with CucumberJS
-    
+
 Playwright end-to-end test automation with CucumberJS
-    
+
 ## Getting Started
 
-* To install Playwright : `npm install playwright --save-dev`
-* To install Cucumber   : `npm install cucumber --save-dev`
-* To install Junit Reporter : `npm install cucumberjs-junitxml --save-dev`
-* To install Chai : `npm install chai --save-dev`
- 
+- To install Playwright : `npm install playwright --save-dev`
+- To install Cucumber : `npm install cucumber --save-dev`
+- To install Junit Reporter : `npm install cucumberjs-junitxml --save-dev`
+- To install Chai : `npm install chai --save-dev`
+
 ## To execute the tests
 
 Define the scripts in package.json as follows :
+
 ```json
 "scripts": {
     "test": "cucumber-js --parallel 1 -f json:report/report.json && node report.js && cat report/report.json | npx cucumber-junit > report/junitreport.xml"
   }
 ```
+
 Finally execute the tests with `npm test`
 
 ### Create a global browser for the test session
+
 ```Javascript
 BeforeAll(async() =>{
         if (moonHost){
@@ -34,14 +36,18 @@ BeforeAll(async() =>{
         }
 });
 ```
+
 ### Create a fresh browser context for each test
+
 ```Javascript
 Before(async() =>{
     global.context = await global.browser.newContext();
     global.page = await global.context.newPage();
 });
 ```
+
 ### A sample Feature file
+
 ```gherkin
 Scenario Outline: Login to the E-Shop Application with Wrong Password
     Given User launched eshop login page
@@ -52,13 +58,17 @@ Scenario Outline: Login to the E-Shop Application with Wrong Password
       | EmailID                    | Password  |
       | testuser_negative@shop.com | Testing$1 |
 ```
+
 ### A sample stepdefinition
+
 ```Javascript
-When('User logged in eshop using the invalid emailid {string} and the invalid password {string}',async(username,password) =>{
+When('User are logged in using an invalid emailid {string} and an invalid password {string}',async(username,password) =>{
     await loginpage.login(username,password);
 });
 ```
+
 ### Example of how a Playwright code snippet looks
+
 ```Javascript
 const { firefox } = require('playwright');
 
@@ -72,6 +82,7 @@ const { firefox } = require('playwright');
   await browser.close();
 })();
 ```
+
 For more on Playwright click [here](https://playwright.dev/)
 
 To know about Moon, how to deploy and use Moon, read the article below :
